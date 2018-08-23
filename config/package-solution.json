@@ -1,0 +1,13 @@
+{
+  "$schema": "https://dev.office.com/json-schemas/spfx-build/package-solution.schema.json",
+  "solution": {
+    "name": "dynamic-favicon-client-side-solution",
+    "id": "2356d866-da12-497a-b4be-9c0baa554b6b",
+    "version": "1.0.0.0",
+    "includeClientSideAssets": true,
+    "skipFeatureDeployment": true
+  },
+  "paths": {
+    "zippedPackage": "solution/dynamic-favicon.sppkg"
+  }
+}
