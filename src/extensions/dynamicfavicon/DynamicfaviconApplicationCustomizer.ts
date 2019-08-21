@@ -30,6 +30,20 @@ export default class DynamicfaviconApplicationCustomizer
     if (!url) {
       Log.info(LOG_SOURCE, strings.Info);
     }else{
+
+        //Add support for internet explorer and edge
+        //The favicon must be removed before adding the new one 
+
+        var links=document.getElementsByTagName('link');
+        var head=document.getElementsByTagName('head')[0];
+        for(var i=0; i<links.length; i++)
+        {
+          if(links[i].getAttribute('rel')==='shortcut icon')
+          {
+            head.removeChild(links[i]);
+          }         
+        } 
+        
         var link = document.querySelector("link[rel*='icon']") as HTMLElement || document.createElement('link') as HTMLElement;
         link.setAttribute('type', 'image/x-icon');
         link.setAttribute('rel', 'shortcut icon');
